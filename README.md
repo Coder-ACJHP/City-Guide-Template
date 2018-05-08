@@ -11,7 +11,7 @@
 <div style="height: 505px;">
   <div style="text-align: left; border:2px solid white; float:left;">
     <label>Home page: </label><br>
-    <img src="https://github.com/Coder-ACJHP/City-Guide/blob/master/resources/images/template/City_guide-Complete.jpg">
+    <img src="https://github.com/Coder-ACJHP/City-Guide-Template/blob/master/resources/images/template/City_guide-Complete.jpg">
   </div>
   </div>
 </div> <br>
