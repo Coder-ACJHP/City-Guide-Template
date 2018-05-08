@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/icons/favicon.ico">
+    <title>City guide - Admin panel</title>
+</head>
+
+<body>
+
+    <section class="upside">
+        <div class="nav-bar">
+            <button class="toggler-btn-left">
+                <img class="nav-img-toggle" src="../resources/icons/toggler-button.png" alt="no icon" />
+            </button>
+            <div class="user-detail-part">
+                <a href="#" class="popover-trigger">
+                    <img class="message-inbox" src="../resources/icons/message-inbox.png">
+                    <div class="popover">
+                        <span class="popover-arrow"></span>
+                        <div class="popover-content">
+                            <label class="popover-header">Message Inbox</label>
+                            <hr class="popover-line">
+                            <div class="popover-messages-container">
+                                <div class="popover-readMessage">
+                                    <p class="sender">From : <span>Onur</span></p>
+                                    Add some text here Add some text here Add some text here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <img class="user-icon" src="../resources/images/unknown-person.png">
+                <label class="user-detail">Jack Jones</label>
+            </div>
+        </div>
+    </section>
+    <div class="private-container">
+        <!-- Collapsible side bar-->
+        <section class="collapsible-sidebar" id="customSidebar">
+            <div class="sidebar-header">
+                    <img class="nav-img" src="../resources/icons/compass.png" alt="no icon" />
+                    <a href="home.html" class="nav-name"> City Guide</a>
+            </div>
+            <div class="moderator-container">
+                <div class="image-container">
+                    <img src="../resources/images/unknown-person.png" class="moderator-img">
+                </div>
+                <div class="moderator-container container-lessMargin">
+                    <div class="name">
+                        <label>Hello!</label><h2>Jack Jones</h2>
+                    </div>
+                    <label class="title">(Moderator)</label>
+                </div>
+            </div>
+            <div class="sidebar-link-container">
+                <a href="#" class="sidebar-item"><img src="../resources/icons/dashboard.png"> <label>Dashboard</label></a>
+                <a href="#" class="sidebar-second-item" id="ui-element"><img class="mini-icon" src="../resources/icons/ui-elements.png"> <label>UI elements</label> 
+                    <img id="drop-icon" class="dropDown-icon-up" src="../resources/icons/carousel-arrow-next.png" alt=""> </a>
+                <div class="dropDown">
+                        <a href="#" class="dropDown-item" id="home">Home page</a>
+                        <a href="#" class="dropDown-item" id="directions">Directions page</a>
+                        <a href="#" class="dropDown-item" id="cityHistory">City history page</a>
+                        <a href="#" class="dropDown-item" id="aboutUs">About us page</a>
+                </div>
+            </div>
+        </section>
+        <section id="dashboard">
+            <!-- Like single page application load the page from js -->
+            <iframe src="" frameborder="0" id="iframe-container"></iframe>
+        </section>
+    </div>
+    
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>

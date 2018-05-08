@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/icons/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>City guide - Login</title>
+</head>
+<body>
+    <section id="section-hero">
+        <img src="../resources/images/login-background.jpg" class="login-backgroud-image">
+        <div class="login-text-content">
+            <h1>Welcome to City Guide</h1>
+            <p>
+                As a moderator, do your best to provide the most accurate content to the user. <br>
+                Remember, popularity of this website depends on the realty and quality of the content it offers.
+            </p>
+        </div>
+        <div class="alert-modal-container">
+            <div class="alert-modal">
+                <div class="modal-upper-line"></div>
+                <div class="modal-box">
+                    <p class="modal-text">If you are not a moderator, please go back to the site!</p>
+                    <button type="button" class="alert-buttons" id="cancel" >Continue</button>
+                    <button type="button" class="alert-buttons" id="goBack" onclick="window.location.href='home.html'">Back to home</button>
+                </div>
+            </div>
+        </div>
+        <form action="" class="login-container" id="login-form">
+            <div class="box">
+                <img src="../resources/icons/compass.png" class="box-icon">
+                <p class="box-text">LOG IN</p>
+                <div>
+                    <input type="email" id="email" class="form-inputs" placeholder="Email">
+                    <div id="email-shadow"></div>
+                </div>
+                <div>
+                    <input type="password" id="password" class="form-inputs" placeholder="Password">
+                    <div id="password-shadow"></div>
+                </div>
+                <div>
+                    <input type="checkbox" name="remember" class="remember-me">
+                    <label class="remember-me-text">Remember me</label>
+                </div>
+                <button type="submit" class="form-button">Log in</button>
+                <label class="form-label">
+                    <a href="#" class="form-link">Forgot password?</a>
+                </label>
+            </div>
+        </form>
+    </section>
+    <script src="../javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<link rel="stylesheet" href="../../css/style.css">
+<div class="shadow-label">
+    <div class="dashboard-header">
+            <div class="hexagon"><span></span></div>
+            <img src="../../resources/icons/dashboard-big.png" class="dashboard-header-icon" alt="dashboard-icon">
+            <div class="dashboard-header-text">
+                <h2>Dashboard</h2>
+                <p>Main website status</p>
+            </div>
+    </div>
+</div>
+<div class="statusBox-container">
+    <div class="statusBox">
+        <img src="../../resources/icons/status-user.png" class="status-img">
+        <label for="status-img" class="statusBox-label">Staff count : </label>
+        <h1 class="status-count">8</h1>
+    </div>
+    <div class="statusBox">
+        <img src="../../resources/icons/statistic.png" class="status-img">
+        <label for="status-img" class="statusBox-label">Visit count : </label>
+        <h1 class="status-count">1520</h1>
+    </div>
+    <div class="statusBox">
+        <img src="../../resources/icons/pages.png" class="status-img">
+        <label for="status-img" class="statusBox-label">Pages count : </label>
+        <h1 class="status-count">10</h1>
+    </div>
+</div>
+
+<table class="custom-table" id="messagesTable">
+        <tr>
+            <th class="table-header" colspan="2">User messages <small>(feedback)</small></th>
+        </tr>  
+        <tr>
+            <td>fatality958@example.com</td>
+            <td class="shortMessage">
+                Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia
+                id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor.
+            </td>
+            <td>25.08.2018</td>
+            <td>
+                <img src="../../resources/icons/reply-email.png" title="Show and reply!" class="reply-email">
+            </td>
+        </tr>
+        <tr>
+            <td>mock_test@example.com</td>
+            <td class="shortMessage">
+                Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia
+                id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor.
+            </td>
+            <td>17.11.2018</td>
+            <td>
+                <img src="../../resources/icons/reply-email.png" title="Show and reply!" class="reply-email">
+            </td>
+        </tr>
+        <tr>
+            <td>fake_address@example.com</td>
+            <td class="shortMessage">
+                Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia
+                id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor.
+            </td>
+            <td>22.06.2018</td>
+            <td>
+                <img src="../../resources/icons/reply-email.png" title="Show and reply!" class="reply-email">
+            </td>
+        </tr>
+        <tr>
+            <td>hexagon_oval@example.com</td>
+            <td class="shortMessage">
+                Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia
+                id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor.
+            </td>
+            <td>05.12.2018</td>
+            <td>
+                <img src="../../resources/icons/reply-email.png" title="Show and reply!" class="reply-email">
+            </td>
+        </tr>
+        <tr>
+            <td>draw_line@example.com</td>
+            <td class="shortMessage">
+                Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia
+                id solevat vim olor. Lorem impsum dolor sit amet, ad eum astidi pertinacia id solevat vim olor.
+            </td>
+            <td>07.07.2018</td>
+            <td>
+                <img src="../../resources/icons/reply-email.png" title="Show and reply!" class="reply-email">
+            </td>
+        </tr>
+    </table>
+    
+<!-- Moderators table-->
+<table class="custom-table" id="messagesTable">
+        <tr>
+            <th class="table-header">Moderators detail list</th>
+        </tr>  
+        <tr>
+            <th class="moderator-table-header">Name & surname</th>
+            <th class="moderator-table-header">Title</th>
+            <th class="moderator-table-header">Email address</th>
+            <th class="moderator-table-header">Phone number</th>
+            <th class="moderator-table-header">Registration date</th>
+        </tr> 
+        <tr>
+            <td>Onur Işık</td>
+            <td>Admin</td>
+            <td>hexa.octabin@gmail.com</td>
+            <td>+90 555 123 4567</td>
+            <td>25.08.2018</td>
+        </tr>
+        <tr>
+            <td>Onur Işık</td>
+            <td>Admin</td>
+            <td>hexa.octabin@gmail.com</td>
+            <td>+90 555 123 4567</td>
+            <td>25.08.2018</td>
+        </tr>
+        <tr>
+            <td>Onur Işık</td>
+            <td>Admin</td>
+            <td>hexa.octabin@gmail.com</td>
+            <td>+90 555 123 4567</td>
+            <td>25.08.2018</td>
+        </tr>
+        <tr>
+            <td>Onur Işık</td>
+            <td>Admin</td>
+            <td>hexa.octabin@gmail.com</td>
+            <td>+90 555 123 4567</td>
+            <td>25.08.2018</td>
+        </tr>
+    </table>
+
+<!-- Message modal -->
+<div id="messageViewer" class="messageViewerGround">
+
+    <!-- Modal content -->
+    <div class="messageViewer-content">
+        <div class="messageViewer-header">
+            <span class="messageViewer-close">&times;</span>
+            <label id="messageViewer-header-text">Message viewer</label>
+        </div>
+        <div class="messageViewer-body">
+            <div class="clientMessage">
+            </div>
+        <textArea class="responseArea" placeholder="Write some thing to user!"></textArea>
+        
+    <button class="quickReplButton" type="button">
+        <img class="buttonImage" src="../../resources/icons/reply-email.png">
+        <label class="buttonLabel">Reply!</label>
+    </button>
+        </div>
+        <div class="messageViewer-footer">
+        <label for="messageViewer-footer"></label>
+        </div>
+    </div>
+</div>
+<a class="scrollLink" onclick="goToDown(this);">
+    <span class="scrollArrow"></span>
+    <span class="scrollArrow"></span>
+    <span class="scrollArrow"></span>
+</a>
+<section id="bottomOfPage"></section>
+<script src="../../javascript/script.js"></script>

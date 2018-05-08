@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="../../css/style.css">
+<div class="shadow-label">
+    <div class="dashboard-header">
+            <div class="hexagon"><span></span></div>
+            <img src="../../resources/icons/dashboard-big.png" class="dashboard-header-icon" alt="dashboard-icon">
+            <div class="dashboard-header-text">
+                <h2>Dashboard</h2>
+                <p>Edit - Home page</p>
+            </div>
+    </div>
+</div>
+
+<section>
+    <table id="messagesTable" class="custom-table">
+        <tbody>
+            <tr>
+                <th class="table-header" colspan="3">
+                    Add, update or delete marker to main map :
+                </th>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>City Center</td>
+                <td>35.47000000</td>
+                <td>44.3950000</td>
+                <td>
+                    <a href="#">
+                        <img class="edit-row" src="../../resources/icons/edit-row.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <img class="delete-row" src="../../resources/icons/delete-row.png">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <form action="" class="form-container" style="width: 100%;">
+                        <div class="form-div">
+                            <label for="locationName">Location name : </label>
+                            <br>
+                            <input name="locationName" class="upper-input" placeholder="Any place name" type="text">
+                        </div>
+                        <div class="form-div">
+                            <label for="latitude">Latitude : </label>
+                            <br>
+                            <input name="latitude" class="upper-input" placeholder="35.47000000" type="text">
+                        </div>
+                        <div class="form-div">
+                            <label for="longitude">Longitude : </label>
+                            <br>
+                            <input name="longitude" class="upper-input" placeholder="44.3950000" type="text">
+                        </div>
+                        <button type="submit" class="add-marker-btn">Add new marker</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<script src="../../javascript/script.js"></script>
