@@ -9,5 +9,36 @@
             </div>
     </div>
 </div>
-
+<section class="direction-up-part">
+    <h1>Edit city history page</h1>
+    <div class="flexDiv">
+        <p for="placeImage" class="form-label alignSelf">Place photos : </p>
+        <div style="flex: 0 1 40%;">
+            <input name="placeImageOne" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
+            <input name="placeImageTwo" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
+            <input name="placeImageThree" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
+            <input name="placeImageFour" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
+        </div>
+    </div>
+    <div>
+        <p for="bannerImage" class="form-label">Page header : </p>
+        <input name="pageHeader" class="standard-input" placeholder="Like Everything about city" type="text">
+    </div>
+    <div class="flexDiv">
+        <p for="cityGeneralInfo" class="form-label alignSelf">General informations : </p>
+        <textarea name="cityGeneralInfo" class="standard-input" placeholder="Write city detail"></textarea>
+    </div>
+    <div class="flexDiv">
+        <h1 style="font-size: 30px; margin:0 auto;">COMING SOON</h1>
+    </div>
+</section>
 <script src="../../javascript/script.js"></script>
+<script>
+    window.onscroll = () => {
+        if (window.pageYOffset >= 50) {
+            document.querySelector('.scrollLink').style.display = "none";
+        } else {
+            document.querySelector('.scrollLink').style.display = "block";
+        }
+    }
+</script>

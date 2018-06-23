@@ -15,7 +15,7 @@
         <strong>Note :</strong> Select what you need to edit, then from second menu select which place you want to work on.
     </div>
     <div>
-        <select class="selectMenu">
+        <select class="selectMenu"  id="select-kind">
             <option value="" selected data-default>Select kind of direction</option>
             <option value="hotels">Hotels</option>
             <option value="shopping">Shopping</option>
@@ -26,7 +26,7 @@
             <option value="evets">Events</option>
             <option value="news">White news</option>
         </select>
-        <select class="selectMenu">
+        <select class="selectMenu" id="select-place">
             <option value="" selected data-default>Select your direction</option>
             <option value="hotels">Cevahir AVM</option>
             <option value="shopping">Ortaköy sahil restaurant</option>
@@ -53,18 +53,22 @@
             <input name="placeAddress" class="standard-input" placeholder="Where is it?" type="text">
         </div>
 
-        <div>
+        <div class="flexDiv">
             <p for="placeOpeningTimes" class="form-label alignSelf">Opening times : </p>
-            <input name="placeOpeningTimes" class="standard-input" placeholder="Weekdays hours" type="text">
-            <input name="placeOpeningTimes" class="standard-input" placeholder="Weekends hours" type="text">
-            <input name="placeOpeningTimes" class="standard-input" placeholder="Holidays " type="text">
+            <div style="flex: 1 1 70%;">
+                <input name="placeOpeningTimes" class="standard-input" placeholder="Weekdays hours" type="text">
+                <input name="placeOpeningTimes" class="standard-input" placeholder="Weekends hours" type="text">
+                <input name="placeOpeningTimes" class="standard-input" placeholder="Holidays " type="text">
+            </div>
         </div>
 
-        <div>
+        <div class="flexDiv">
             <p for="placeOtherInfos" class="form-label alignSelf">Other informations : </p>
-            <input name="placeOtherInfos" class="standard-input" placeholder="Phone number" type="text">
-            <input name="placeOtherInfos" class="standard-input" placeholder="Offical website" type="text">
-            <input name="placeOtherInfos" class="standard-input" placeholder="Entry fee" type="text">
+            <div style="flex: 1 1 70%;">
+                <input name="placeOtherInfos" class="standard-input" placeholder="Phone number" type="text">
+                <input name="placeOtherInfos" class="standard-input" placeholder="Offical website" type="text">
+                <input name="placeOtherInfos" class="standard-input" placeholder="Entry fee" type="text">
+            </div>
         </div>
 
         <div class="flexDiv">
@@ -73,8 +77,8 @@
         </div>
 
         <div class="flexDiv">
-            <p for="placeImage" class="form-label alignSelf coverFiftyPercent">Place photos : </p>
-            <div>
+            <p for="placeImage" class="form-label alignSelf">Place photos : </p>
+            <div style="flex: 0 1 60%;">
                 <input name="placeImageOne" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
                 <input name="placeImageTwo" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
                 <input name="placeImageThree" class="standard-input fileChooser" placeholder="Recommended size 403 X 200" type="file">
@@ -96,3 +100,13 @@
 </a>
 <section id="bottomOfPage"></section>
 <script src="../../javascript/script.js"></script>
+<script>
+
+    window.onscroll = ()=> {
+        if (window.pageYOffset >= 50) {
+            document.querySelector('.scrollLink').style.display = "none";
+        } else {
+            document.querySelector('.scrollLink').style.display = "block";
+        } 
+    }
+</script>

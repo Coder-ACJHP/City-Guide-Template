@@ -1,9 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="../resources/icons/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- External font icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
     <title>City guide - Login</title>
 </head>
 <body>
@@ -22,7 +25,7 @@
                 <div class="modal-box">
                     <p class="modal-text">If you are not a moderator, please go back to the site!</p>
                     <button type="button" class="alert-buttons" id="cancel" >Continue</button>
-                    <button type="button" class="alert-buttons" id="goBack" onclick="window.location.href='home.html'">Back to home</button>
+                    <button type="button" class="alert-buttons" id="goBack" onclick="window.location.href='/city-guide.github.io./index.html'">Back to home</button>
                 </div>
             </div>
         </div>
@@ -39,8 +42,8 @@
                     <div id="password-shadow"></div>
                 </div>
                 <div>
-                    <input type="checkbox" name="remember" class="remember-me">
-                    <label class="remember-me-text">Remember me</label>
+                    <input type="checkbox" name="remember" class="remember-me" id="remember">
+                    <label class="remember-me-text" for="remember">Remember me</label>
                 </div>
                 <button type="submit" class="form-button">Log in</button>
                 <label class="form-label">

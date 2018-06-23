@@ -69,3 +69,12 @@
 </section>
 
 <script src="../../javascript/script.js"></script>
+<script>
+    window.onscroll = () => {
+        if (window.pageYOffset >= 50) {
+            document.querySelector('.scrollLink').style.display = "none";
+        } else {
+            document.querySelector('.scrollLink').style.display = "block";
+        }
+    }
+</script>

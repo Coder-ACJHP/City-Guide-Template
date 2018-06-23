@@ -80,42 +80,33 @@
             
         }
     }
-
-    /** Show Modal */
-    var modal = document.getElementById('modalFrame');
     
-    if(modal) {
-        /** Get the all modal triggers */
-        var allTriggers = document.querySelectorAll('.direction-card');
-        var span = document.getElementsByClassName("close")[0];
-        var modalHeader = document.getElementById('modal-header-text');
-        var branches = ['Hotels', 'Shopping', 'Restaurants', 'Historical places', 'Librarys', 'Events', 'White news', 'Gardens & Parks'];
-        
-        /** Iterate all selected elements and show the modal */
-        allTriggers.forEach((btn)=> {
-            btn.onclick =()=> {
-                var customText = btn.childNodes[1].textContent;
-                branches.forEach((element)=> {
-                    if(customText.includes(element)){
-                        modalHeader.innerHTML = 'City ' + element;
+/** Directing to lists with passing parameter */
+    let allDivs = document.getElementsByTagName('div');
+    const branches = ['hotels', 'shoppings', 'restaurants', 'historicals', 'librarys', 'gardens-parks'];
+    if (allDivs.length > 0) {
+        for (let i = 0; i < allDivs.length; i++) {
+            for (let j = 0; j < branches.length; j++) {
+                const element = branches[j];
+
+                if (allDivs[i].id === element) {
+                    allDivs[i].onclick = ()=> {
+                        window.location.href = 'html/directions-list.html?list='+element;
                     }
-                });
-                modal.style.display = "block";
+                }
             }
-        });
 
-        /** Hide modal when user click on X icon */
-        span.onclick = function() {
-            modal.style.display = "none";
         }
+    }
 
-        /** Hide the modal if clicked outside of modal */
-        window.onclick = (event) => {
-            if (event.target == modal) 
-                modal.style.display = "none";
-        }
+    let directionHeader = document.getElementById('direction-title');
+    if (directionHeader) {
+        var url = new URL(window.location.href);
 
-   
+        directionHeader.innerHTML = " "+url.searchParams.get("list");
+    }
+/** This function end... */
+
 
     /** Scroll page functions */
     var directionPage = document.getElementById('directions');
@@ -139,7 +130,6 @@
             takeMeToPosition('#section-three');
         }); 
     }
-}
 
  /** Map initialize and config */
  var mapOptions = {};
@@ -177,7 +167,7 @@ function selectMapType(type) {
     var marker = new google.maps.Marker({
         position: initialCityAddress,
         map: map,
-        icon: '../resources/icons/map-pointer.png',
+        icon: 'resources/icons/map-pointer.png',
         title: 'Heart of Iraq'
       });
 }
@@ -202,20 +192,14 @@ function selectMapType(type) {
 
  function showOverlayText() {
      document.querySelector('.ribbon-hero').style.zIndex = "1";
-     document.querySelectorAll('.ribbon-right').forEach(rb=> {
+     document.querySelectorAll('.ribbon').forEach(rb=> {
          rb.style.zIndex = "1";
      })
-     document.querySelectorAll('.ribbon-bottom').forEach(rb=> {
-        rb.style.zIndex = "1";
-    })
  }
 
  function hideOverlayText() {
     document.querySelector('.ribbon-hero').style.zIndex = "0";
-     document.querySelectorAll('.ribbon-right').forEach(rb=> {
-        rb.style.zIndex = "0";
-    })
-     document.querySelectorAll('.ribbon-bottom').forEach(rb=> {
+     document.querySelectorAll('.ribbon').forEach(rb=> {
         rb.style.zIndex = "0";
     })
 }
@@ -655,3 +639,54 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = window.location.href+'#bottomOfPage'
         event.style.display = "none";
     }
+
+    /** Directions page enable property */
+    var selectInput = document.getElementById('select-kind');
+    var selectPlace = document.getElementById('select-place');
+    if (selectInput) {
+        selectInput.onclick = ()=> {
+            
+            if (selectInput.selectedIndex > 0) {
+                selectPlace.style.pointerEvents = "auto";
+                selectPlace.style.opacity = 1;
+            }
+
+        }
+    }
+
+    if (selectPlace) {
+        selectPlace.onclick = ()=> {
+            document.querySelector('.edit-container').style.pointerEvents = "auto";
+            document.querySelector('.edit-container').style.opacity = 1;
+        }
+    }
+
+/** Trigger modal width events */
+/** Show Modal */
+    var modal = document.getElementById('modalFrame');
+    
+        /** Get the all modal triggers */
+        var allTriggers = document.querySelectorAll('.event');
+        var span = document.getElementsByClassName("close")[0];
+        var modalHeader = document.getElementById('modal-header-text');
+
+        /** Iterate all selected elements and show the modal */
+        allTriggers.forEach((btn)=> {
+            btn.onclick =()=> {
+                const element = btn.querySelector('.event-name').innerHTML;
+                modalHeader.innerHTML = element;
+                modal.style.display = "block";
+            }
+        });
+
+        /** Hide modal when user click on X icon */
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        /** Hide the modal if clicked outside of modal */
+        window.onclick = (event) => {
+            if (event.target == modal) 
+                modal.style.display = "none";
+        }
+
