@@ -13,7 +13,7 @@ Admin panel : <a href="https:https://coder-acjhp.github.io/City-Guide-Template/h
 <br><br>
 <div style="height: 505px;">
   <div style="text-align: left; border:2px solid white; float:left;">
-    <img src="https:https://coder-acjhp.github.io/City-Guide-Template/blob/gh-pages/resources/images/template/City_guide-Complete.jpg">
+    <img src="https://github.com/Coder-ACJHP/City-Guide-Template/blob/master/resources/images/template/City_guide-Complete.jpg">
   </div>
   </div>
 </div> <br>
